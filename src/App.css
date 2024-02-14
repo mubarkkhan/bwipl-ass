@@ -1,38 +1,266 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+}
+.fclose{
+  transform: translateX(-600px);
+  transition: all 1s ease-in-out;
+  position: fixed;
+  z-index: 5;
+  background-color: black;
+  width: 26%;
+}
+.fclose button{
+  padding: 0.3rem 0.6rem;
+    border: 2px solid #dc4a6f;
+    background-color: #dc4a6f;
+    border-radius: 5px;
+    margin: 0.5rem;
+}
+.fopen button{
+  padding: 0.3rem 0.6rem;
+    border: 2px solid #dc4a6f;
+    background-color: #dc4a6f;
+    border-radius: 5px;
+    margin: 0.5rem;
+}
+.fopen{
+  transform: translateX(10px);
+  transition: all 0.7s ease-in-out;
+  position: fixed;
+  z-index: 5;
+  width: 26%;
+  background-color: black;
+}
+button.off1{
+  padding: 0.3rem 0.6rem;
+    border: 2px solid #dc4a6f;
+    background-color: #dc4a6f;
+    border-radius: 5px;
+    margin: 0.5rem;
+    position: fixed;
+    z-index: 20;
+    top: 13%;
+}
+button.on1{
+  display: none;
+}
+input.cin{
+  position: absolute;
+    top: 7.5%;
+    padding-left: 5px;
+    left: 24%;
+    border-radius: 5px;
+    border: 2px solid #938e8e;
+}
+input.cin:focus{
+  outline-color: #00b9ff;
+}
+.login {
+  display: grid;
+  grid-row-gap: 0px;
+  place-items: center;
+  height: 70vh;
+  align-content: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.login img {
+  width: 100%;
+  max-width: 200px;
+  margin-bottom: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.login input {
+  padding: 0.3rem 0.4rem;
+  width: 240px;
+  border-radius: 5px;
+  border: 2px solid #00b9ff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.login input:focus {
+  outline: #69c8ea !important;
+  outline: none;
+}
+
+.login button {
+  padding: 0.2rem 0.6rem;
+  border-radius: 5px;
+  border: 2px solid deepskyblue;
+  background-color: deepskyblue;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.login h4 {
+  font-size: 1rem;
+  margin-top: 0.3rem;
+  color: #e05a5a;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* ///header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 91%;
+  margin: 1.2rem auto;
+}
+
+.header .logo img {
+  width: 100%;
+  max-width: 200px;
+}
+
+.header .nav {
+  width: 48%;
+  display: flex;
+  margin-top: 0.7rem;
+  justify-content: space-between;
+}
+
+.header .nav .list li {
+  display: inline-block;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  text-transform: capitalize;
+  font-family: sans-serif;
+}
+
+.header .nav .list a.active {
+  color: red !important;
+}
+.header .nav .list a{
+  color: black;
+}
+.header .nav .but button {
+  padding: 0.5rem 2rem;
+  border: 2px solid red;
+  border-radius: 33px;
+  background-color: red;
+  font-family: sans-serif;
+  color: white;
+  text-shadow: 1px -1px 20px blanchedalmond;
+  transition: all 0.7s ease-in-out;
+}
+.header .nav .but button:hover{
+  background-color: #f40b0b;
+  border-color: #f40b0b;
+}
+.cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fill , minmax(18%,1fr));
+  grid-auto-rows: minmax(15%,auto);
+  grid-auto-columns: minmax(20%,auto);
+}
+.cards .card{
+    padding: 0 1rem;
+    margin: 0.4rem 0.3rem;
+}
+.cards .card img{
+  width: 100%;
+    aspect-ratio: 1/1;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+.cards .card h3{
+  font-size: 1.3rem;
+    font-weight: 400;
+    color: #504949;
+    margin-top: 0.4rem;
+    cursor: pointer;
+}
+.cards .card:hover h3{
+  color: blue;
+}
+.cards .card h5{
+  background-color: #1b911b;
+    color: white;
+    padding: 0.1rem 0.3rem;
+    font-size: 0.9rem;
+    width: 55px;
+    border-radius: 4px;
+}
+.cards .card h5 svg{
+  font-size: 0.7rem;
+  margin-top: -3px;
+  margin-left: 4px;
+
+}
+.cards .card h2{
+  font-size: 1.5rem;
+}
+.detail{
+  padding-top: 1rem;
+  display: flex;
+    justify-content: space-between;
+    width: 97%;
+    margin: auto;
+}
+.detail .image{
+  display: flex;
+  justify-content: space-between;
+    width: 50%;
+}
+.detail .image img{
+  width: 100%;
+  aspect-ratio: 1/1;
+  max-width: 450px;
+}
+.detail .image .img{
+  display: grid;
+    grid-row-gap: 5px;
+}
+.detail .image .img button{
+  border: none;
+}
+.detail .image .main-img button{
+  padding: 0.3rem 0.7rem;
+    border: 2px solid #ff6321;
+    background-color: #ff6321;
+    color: white;
+    text-shadow: -2px 0px 10px;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 2rem;
+}
+.detail .image .img button img{
+  width: 100%;
+  max-width: 100px;
+  aspect-ratio: 1/1;
+}
+.detail .det{
+  width: 41%;
+  margin: 0 auto;
+}
+.detail .det h4{
+  background-color: #1b911b;
+    color: white;
+    padding: 0.1rem 0.3rem;
+    font-size: 0.9rem;
+    width: 55px;
+    border-radius: 4px;
+}
+.detail .det h4 svg{
+  font-size: 0.7rem;
+  margin-top: -3px;
+  margin-left: 4px;
+}
+.detail .det span.pisa{
+  font-size: 2rem;
+  font-weight: 600;
+}
+.detail .det span.pisa svg{
+  font-size: 1.6rem;
+    margin-top: -5px;
+}
+.detail .det span.dper{
+  font-size: 1rem;
+  margin-left: 1.5rem;
+  color: #1b911b;
+  font-weight: 500;
+}
+.cart .cart-d{
+  display: flex;
+}
+.cart .cart-d .cart-dd{
+  display: flex;
 }
