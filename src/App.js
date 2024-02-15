@@ -9,6 +9,8 @@ import { About } from "./About/about";
 import { CartProvider } from "react-use-cart";
 import { Detail } from "./screencomponentes/detail";
 import { Cart } from "./screencomponentes/cart";
+import { Contact } from "./About/contact";
+import { Portfolio } from "./About/portfolio";
 
 function Bwipl(){
   return(
@@ -20,6 +22,8 @@ function Bwipl(){
       <Route path="/home" element={<Home/>}/>
       <Route path="/detail/:productId" element={<Detail/>}/>
       <Route path="/about" element={<About/>}/>
+      <Route path="/contact" element={<Contact/>}/>
+      <Route path="/portfolio" element={<Portfolio/>}/>
       <Route path="/cart" element={<Cart/>}/>
     </Routes>
     </BrowserRouter>

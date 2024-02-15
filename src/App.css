@@ -2,6 +2,16 @@
   padding: 0;
   margin: 0;
 }
+.empty{
+  text-align: center;
+}
+.empty button.exit{
+  padding: 0.3rem 0.6rem;
+    border: 2px solid #dc4a6f;
+    background-color: #dc4a6f;
+    border-radius: 5px;
+    margin: 0.5rem;
+}
 .fclose{
   transform: translateX(-600px);
   transition: all 1s ease-in-out;
@@ -130,6 +140,22 @@ input.cin:focus{
 }
 .header .nav .list a{
   color: black;
+}
+.header .nav .but span{
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #d9141f;
+}
+.header .nav .but a{
+  text-decoration: none;
+}
+.header .nav .but h6{
+  position: absolute;
+    top: 4%;
+    left: 95%;
+    background-color: #f78438;
+    padding: 0.1rem 0.2rem;
+    border-radius: 61px;
 }
 .header .nav .but button {
   padding: 0.5rem 2rem;
@@ -260,7 +286,72 @@ input.cin:focus{
 }
 .cart .cart-d{
   display: flex;
+  justify-content: space-between;
+    width: 96%;
+    margin: auto;
+    padding: 1rem 0;
+}
+.cart .cart-d .button{
+  box-shadow: 0px 0px 10px;
+    width: 20%;
+    margin: 0 auto;
+    padding: 0.5rem;
+    text-align: center;
+}
+.cart .cart-d .button button.plus{
+  padding: 0 0.2rem;
+    border: 2px solid #1b911b;
+    background-color: #1b911b;
+    color: white;
+    border-radius: 2px;
+}
+.cart .cart-d .button button.min{
+  padding: 0 0.3rem;
+  border: 2px solid #ff070a;
+    background-color: #ff070a;
+    color: white;
+    border-radius: 2px;
+}
+.cart .cart-d .button button.rem{
+  border-radius: 3px;
+    border: 2px solid #ff2b10;
+    background-color: #ff2b10;
+    padding: 0.3rem 0.5rem;
+    margin-left: 1rem;
+    color: white;
+    margin-right: 1rem;
 }
 .cart .cart-d .cart-dd{
   display: flex;
+    padding: 0.5rem;
+    box-shadow: 0px 0px 10px;
+    width: 75%;
+    margin: auto;
+}
+.cart .cart-d .cart-dd .img img{
+  width: 100%;
+  max-width: 250px;
+  aspect-ratio: 1/1;
+}
+.cart .cart-d .cart-dd .c-detail{
+  width: 58%;
+  margin: 0 auto;
+}
+.cart .cart-d .cart-dd .c-detail span.pisa{
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+.cart .cart-d .cart-dd .c-detail span.pisa svg{
+  font-size: 1.25rem;
+    margin-top: -2px;
+}
+.cart .cart-d .cart-dd .c-detail span.dper{
+  font-size: 1rem;
+  margin-left: 1.5rem;
+  color: #1b911b;
+  font-weight: 500;
+}
+.cart h3 svg{
+  margin-top: -5px;
+    font-size: 1.5rem;
 }

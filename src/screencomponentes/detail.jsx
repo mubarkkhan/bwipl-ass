@@ -4,6 +4,7 @@ import { FaStar } from "react-icons/fa";
 import { FaRupeeSign } from "react-icons/fa";
 import { useCart } from "react-use-cart";
 import { Link } from "react-router-dom";
+import { Header } from "../Header/header";
 
 function Detail() {
     const { productId } = useParams()
@@ -23,9 +24,10 @@ function Detail() {
         const imggg = e.target.src
         setimg(imggg)
     }
-    const {addItem} = useCart()
+    const {addItem,inCart} = useCart()
     return (
         <>
+        <Header/>
             <div className="detail">
                 <div className="image">
                     <div className="img">
@@ -38,7 +40,7 @@ function Detail() {
                     <div className={`${setimg} main-img`}>
                         <img src={img} alt="" />
                         <br />
-                        <Link to='/cart'><button onClick={()=>{addItem(data)}}>ADD TO CART</button></Link>
+                        {inCart(data.id) ?  <Link to='/cart'><button>Added</button></Link> : <button onClick={()=>{addItem(data)}}>ADD TO CART</button>}
                     <button>BUY NOW</button>
                     </div>          
                 </div>
